@@ -1,6 +1,6 @@
 ## Jean Carlo Benites Porras
 
-Senior full-stack developer · Java/Spring, Angular, Go<br>
+Senior full-stack developer · Java/Spring, Angular, Go, Astro<br>
 Lima, Peru · remote, UTC-5 · open to a remote role
 
 [aquilabot.dev](https://aquilabot.dev/?lang=en) · [jeancarlobenites@gmail.com](mailto:jeancarlobenites@gmail.com) · [LinkedIn](https://www.linkedin.com/in/jean-carlo-aq) · [Resume (PDF)](https://aquilabot.dev/cv/Jean-Carlo-Benites-Porras-Resume-EN.pdf)
@@ -29,7 +29,7 @@ The lines above come from [a recording](assets/bg3-dead-aim.cast) of a run on Oc
 
 ### CLX
 
-A platform where many organizations run their esports tournaments, across games. I built it alone: product, Go backend, Astro frontend and deployment. 82 REST endpoints, 7 tournament formats, 3 languages and a hash-chained audit log, on Go, PostgreSQL, Redis, WebSockets and Astro.
+A platform where many organizations run their esports tournaments, across games. I founded it and own it with two partners, and I am its sole developer: product, Go backend, Astro frontend and deployment. 82 REST endpoints, 7 tournament formats, 3 languages and a hash-chained audit log, on Go, PostgreSQL, Redis, WebSockets and Astro.
 
 Live at [clx.pe](https://clx.pe) since October 2026 · [case study](https://aquilabot.dev/en/work/clx/)
 
