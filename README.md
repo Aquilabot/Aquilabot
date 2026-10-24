@@ -23,9 +23,9 @@ Every line carries its number and where it comes from.
 
 One command opens the real game, loads a hash-verified disposable save, drives it over a JSON channel and restores the mod configuration byte for byte. Every scenario ends in PASS or FAIL.
 
-<a href="https://github.com/Aquilabot/bg3-ingame-harness"><img src="assets/bg3-run.svg" alt="A real run of bg3-ingame-harness: 23 checks inside Baldur’s Gate 3 pass, then the crooked.dead-aim scenario passes in 26,000 ms." width="100%"></a>
+<a href="https://github.com/Aquilabot/bg3-ingame-harness"><img src="assets/bg3-run.svg" alt="A real run of bg3-ingame-harness: 23 checks inside Baldur’s Gate 3 pass, then the crooked.dead-aim scenario passes." width="100%"></a>
 
-The lines above come from [a recording](assets/bg3-dead-aim.cast) of a run on October 19, 2026; only the timing is sped up. 439 in-game scenarios, 1,737 Vitest tests. [Code](https://github.com/Aquilabot/bg3-ingame-harness) · [case study](https://aquilabot.dev/en/work/bg3-tests/)
+The lines above come from [a recording](assets/bg3-dead-aim.cast) of a run on October 19, 2026; only the timing is sped up. The game’s clock counts whole seconds, so TIME is only accurate to the second. 439 in-game scenarios, 1,737 Vitest tests. [Code](https://github.com/Aquilabot/bg3-ingame-harness) · [case study](https://aquilabot.dev/en/work/bg3-tests/)
 
 ### CLX
 
