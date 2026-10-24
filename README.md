@@ -37,7 +37,7 @@ Live at [clx.pe](https://clx.pe) since October 2026 · [case study](https://aqui
 
 All MIT.
 
-- **[bg3-ingame-harness](https://github.com/Aquilabot/bg3-ingame-harness)**: Test scenarios inside the real Baldur’s Gate 3, from one command. <sub>TypeScript, Lua · 435 tests</sub>
+- **[bg3-ingame-harness](https://github.com/Aquilabot/bg3-ingame-harness)**: Test scenarios inside the real Baldur’s Gate 3, from one command. <sub>TypeScript, Lua · 440 tests</sub>
 - **[brackets](https://github.com/Aquilabot/brackets)**: The 7 tournament formats from CLX as a library: brackets, Swiss, groups, leagues and stages. <sub>Go · v0.1.0 · used in CLX</sub>
 - **[hashchain](https://github.com/Aquilabot/hashchain)**: An append-only log where changing a stored entry breaks the chain at the exact point. <sub>Go, PostgreSQL · v0.1.1 · used in CLX</sub>
 - **[spring-gotenberg-reports](https://github.com/Aquilabot/spring-gotenberg-reports)**: PDF reports from Thymeleaf templates and Gotenberg, with parallel sections and progress over SSE. <sub>Java 21 · Spring Boot 4.1</sub>
