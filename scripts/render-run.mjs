@@ -5,8 +5,15 @@ import { readFileSync, writeFileSync } from 'node:fs'
 
 const [castPath = 'assets/bg3-dead-aim.cast', outPath = 'assets/bg3-run.svg'] = process.argv.slice(2)
 
-const events = readFileSync(castPath, 'utf8').trim().split('\n').slice(1).map((l) => JSON.parse(l))
-const lines = events.map((e) => e[2]).join('').split('\r\n').filter(Boolean)
+const [headerLine, ...eventLines] = readFileSync(castPath, 'utf8').trim().split('\n')
+const header = JSON.parse(headerLine)
+const events = eventLines.map((l) => JSON.parse(l))
+const allLines = events.map((e) => e[2]).join('').split('\r\n').filter(Boolean)
+// Stop at the scenario's own verdict; anything after it is the runner's shutdown audit.
+const verdict = allLines.findIndex((l) => /^PASS [\w.-]+$/.test(l))
+const lines = verdict === -1 ? allLines : allLines.slice(0, verdict + 1)
+const recordedOn = new Date(header.timestamp * 1000).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'America/Lima' })
+const recordedMinutes = Math.max(1, Math.round(events.at(-1)[0] / 60))
 
 // Palette and type from the portfolio's DESIGN.md.
 const C = { bg: '#0e100f', surface: '#141715', line: '#242926', text: '#e6e9e5', muted: '#a3aba5', faint: '#7e8781', accent: '#8fe3ad' }
@@ -105,8 +112,8 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" 
 <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="10" fill="${C.bg}" stroke="${C.line}"/>
 <path d="M0.5 ${HEAD}H${W - 0.5}" stroke="${C.line}"/>
 <g font-family="${FONT}" font-size="${SIZE}">
-<text x="${PAD}" y="${HEAD / 2 + 4.5}" fill="${C.muted}">bg3-ingame-harness <tspan fill="${C.faint}">· real run, Oct 19, 2026</tspan></text>
-<text x="${W - PAD}" y="${HEAD / 2 + 4.5}" fill="${C.faint}" text-anchor="end">a 2-minute run, sped up</text>
+<text x="${PAD}" y="${HEAD / 2 + 4.5}" fill="${C.muted}">bg3-ingame-harness <tspan fill="${C.faint}">· real run, ${recordedOn}</tspan></text>
+<text x="${W - PAD}" y="${HEAD / 2 + 4.5}" fill="${C.faint}" text-anchor="end">a ${recordedMinutes}-minute run, sped up</text>
 <g clip-path="url(#win)"><g class="scroll">${body}</g></g>
 </g>
 </svg>
