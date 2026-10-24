@@ -25,7 +25,7 @@ One command opens the real game, loads a hash-verified disposable save, drives i
 
 <a href="https://github.com/Aquilabot/bg3-ingame-harness"><img src="assets/bg3-run.svg" alt="A real run of bg3-ingame-harness: 23 checks inside Baldur’s Gate 3 pass, then the crooked.dead-aim scenario passes." width="100%"></a>
 
-The lines above come from [a recording](assets/bg3-dead-aim.cast) of a run on October 24, 2026; only the timing is sped up. After the scenario passed, the harness’s save audit flagged the run because Steam Cloud downloaded saves while the game was open; the recording keeps that part. 439 in-game scenarios, 1,737 Vitest tests. [Code](https://github.com/Aquilabot/bg3-ingame-harness) · [case study](https://aquilabot.dev/en/work/bg3-tests/)
+The lines above come from [a recording](assets/bg3-dead-aim.cast) of a run on October 24, 2026; only the timing is sped up. 439 in-game scenarios, 1,737 Vitest tests. [Code](https://github.com/Aquilabot/bg3-ingame-harness) · [case study](https://aquilabot.dev/en/work/bg3-tests/)
 
 ### CLX
 
