@@ -37,12 +37,14 @@ Live at [clx.pe](https://clx.pe) since October 2026 · [case study](https://aqui
 
 All MIT.
 
-- **[bg3-ingame-harness](https://github.com/Aquilabot/bg3-ingame-harness)**: Test scenarios inside the real Baldur’s Gate 3, from one command. <sub>TypeScript, Lua · 440 tests</sub>
+- **[bg3-ingame-harness](https://github.com/Aquilabot/bg3-ingame-harness)**: Test scenarios inside the real Baldur’s Gate 3, from one command. <sub>TypeScript, Lua · 440 tests outside the game</sub>
 - **[brackets](https://github.com/Aquilabot/brackets)**: The 7 tournament formats from CLX as a library: brackets, Swiss, groups, leagues and stages. <sub>Go · v0.1.0 · used in CLX</sub>
 - **[hashchain](https://github.com/Aquilabot/hashchain)**: An append-only log where changing a stored entry breaks the chain at the exact point. <sub>Go, PostgreSQL · v0.1.1 · used in CLX</sub>
 - **[spring-gotenberg-reports](https://github.com/Aquilabot/spring-gotenberg-reports)**: PDF reports from Thymeleaf templates and Gotenberg, with parallel sections and progress over SSE. <sub>Java 21 · Spring Boot 4.1</sub>
 - **[spring-idempotency](https://github.com/Aquilabot/spring-idempotency)**: The Idempotency-Key header for Spring Boot: a retry replays the response and the handler runs once. <sub>Java 21 · PostgreSQL · 69 tests</sub>
 - **[ngx-sse-resource](https://github.com/Aquilabot/ngx-sse-resource)**: Server-Sent Events as Angular signals, with backoff reconnect and SSR support. <sub>Angular 22 · 27 tests · 1.7 kB</sub>
 - **[share-links](https://github.com/Aquilabot/share-links)**: An image and short-link service that checks each image by its bytes, with per-IP limits and storage caps. <sub>Node 24 · no dependencies · 41 tests</sub>
+
+Also a [fix in midudev/mundial-de-clicks](https://github.com/midudev/mundial-de-clicks/pull/5), merged October 16, 2026: the rate limit, the daily vote cap and captcha sessions now group IPv6 clients by their /64 prefix, so rotating addresses inside one /64 no longer resets them.
 
 <sub>Spanish native · English upper intermediate (B2) · [en español: aquilabot.dev](https://aquilabot.dev/?lang=es) · the terminal above is drawn by [scripts/render-run.mjs](scripts/render-run.mjs)</sub>
